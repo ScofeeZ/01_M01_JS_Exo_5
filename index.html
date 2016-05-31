@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button onclick=jesaiscompter() id="valider" name ="valider">Valider</button>
+        </form>
+        <script>
+        function jesaiscompter() {
+        var premier_nombre = document.getElementById("premier_nombre").value;
+        var deuxieme_nombre = document.getElementById("deuxieme_nombre").value;
+          if (isNaN (premier_nombre) == true || isNaN (deuxieme_nombre) == true) {
+          alert("ta mère la tartiflette!");
+          }
+          else {
+          premier_nombre = parseInt(premier_nombre);
+          deuxieme_nombre = parseFloat(deuxieme_nombre);
+          var showtime = (premier_nombre * deuxieme_nombre);
+          alert("Mon résultat est " + showtime + " !");
+          }
+        }
+        </script>
+    </body>
+</html>
